@@ -66,6 +66,7 @@ class AbstractUserSocialAuth(models.Model, DjangoUserMixin):
 
 class UserSocialAuth(AbstractUserSocialAuth):
     """Social Auth association model"""
+    unionid = models.CharField(max_length=UID_LENGTH, blank=True, null=True)
 
     class Meta:
         """Meta data"""
